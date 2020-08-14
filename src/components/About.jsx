@@ -30,7 +30,7 @@ export default function About(props) {
           <img
             className="img-fluid"
             width="3000px"
-            src="/logo512.png"
+            src={data.logo}
             alt="Main Logo"
           />
         </div>

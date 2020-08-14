@@ -2,6 +2,7 @@ import React from "react";
 import Popup from "reactjs-popup";
 import { FaShoppingCart, FaInfo } from "react-icons/fa";
 import Zoom from "react-reveal/Zoom";
+import data from "../data";
 export default () => (
   <Popup
     trigger={
@@ -23,14 +24,14 @@ export default () => (
             <img
               width="35px"
               src="https://discordapp.com/assets/63228fcdf74039fa92cb1188586fa030.svg"
-              alt="Mail Image"
-            ></img>{" "}
+              alt=""
+            />{" "}
             Di Channel Server Support
           </h6>
         </section>
         <hr className="mb-5 mt-3 "></hr>
         <h6 className="align-self-center">
-          <a href="https://discord.gg/">Klik untuk masuk Discord</a>
+          <a href={data.discordLinks}>Klik untuk masuk Discord</a>
         </h6>
       </div>
     </Zoom>

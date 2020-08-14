@@ -14,8 +14,8 @@ export default function Home(props) {
           <RubberBand delay={1100}>
             <img
               className="img-fluid"
-              width="250px"
-              src="/logo512.png"
+              width="300px"
+              src={data.logo}
               alt="logo"
             />
           </RubberBand>
@@ -36,7 +36,9 @@ export default function Home(props) {
           </Fade>
           <br />
           <Zoom delay={1500}>
-            <button href={data.registerLinks} className="btn btn-dark mt-3 p-3">{data.langJoin}</button>
+            <a href={data.registerLinks}>
+              <button className="btn btn-dark mt-3 p-3">{data.langJoin}</button>
+            </a>
           </Zoom>
         </div>
       </section>

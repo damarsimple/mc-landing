@@ -26,7 +26,7 @@ export default function Gamemode(props) {
           {data.games.map((e, index) => {
             if (index % 2 === 0) {
               return (
-                <Fade left delay={1250 + index * 120}>
+                <Fade key={index}left delay={1250 + index * 120}>
                   <GameCardOdd
                     name={e.name}
                     description={e.description}

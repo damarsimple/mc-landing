@@ -6,7 +6,7 @@ export default function Navbar(props) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
         <a className="navbar-brand d-flex" href="#home">
-          <h3> {data.title}</h3>
+          <h3 className="font-weight-bold text-uppercase text-info"> {data.title}</h3>
         </a>
         <button
           className="navbar-toggler"
@@ -42,7 +42,7 @@ export default function Navbar(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/forum">
+              <a className="nav-link" href={data.forumLinks}>
                 {data.langForum}
               </a>
             </li>

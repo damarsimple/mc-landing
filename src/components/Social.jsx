@@ -28,12 +28,12 @@ export default function Social(props) {
           <div className="row">
             <Fade left delay={100}>
               <div className="col-md-6">
-                <InstagramCard description={data.langFollowInsta}/>
+                <InstagramCard description={data.langFollowInsta} links={data.instagramLinks}/>
               </div>
             </Fade>
             <Fade right delay={200}>
               <div className="col-md-6">
-                <DiscordCard description={data.langJoinDiscord}/>
+                <DiscordCard description={data.langJoinDiscord} links={data.discordLinks}/>
               </div>
             </Fade>
           </div>

@@ -25,7 +25,9 @@ class App extends React.Component {
     fetch("https://api.mcsrvstat.us/2/mc.galaxivale.net")
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ playerCount: data.players.online });
+        if (data.debug.ping) {
+          this.setState({ playerCount: data.players.online });
+        }
         this.setState({ serverStatus: data.debug.ping });
       });
   }
@@ -34,7 +36,11 @@ class App extends React.Component {
       <>
         <Navbar props={data} />
 
-        <Home  props={data} status={this.state.serverStatus} count={this.state.playerCount} />
+        <Home
+          props={data}
+          status={this.state.serverStatus}
+          count={this.state.playerCount}
+        />
 
         <About props={data} />
 

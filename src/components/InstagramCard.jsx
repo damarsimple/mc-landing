@@ -8,6 +8,11 @@ export default function InstagramCard(props) {
       <h2 className="text-uppercase text-center font-weight-bold">INSTAGRAM</h2>
       <hr></hr>
       <h5 className="text-center">{props.description}</h5>
+      <div className="d-flex justify-content-center">
+        <a href={props.links}>
+          <button className="btn btn-primary">JOIN</button>
+        </a>
+      </div>
     </div>
   );
 }

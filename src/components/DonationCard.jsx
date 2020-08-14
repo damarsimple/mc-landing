@@ -1,5 +1,7 @@
 import React from "react";
 import DonationPopup from "./DonationPopup";
+import NumberFormat from "react-number-format";
+import Popup from "reactjs-popup";
 export default function DonationCard(props) {
   let color = "";
   switch (props.color) {
@@ -25,25 +27,58 @@ export default function DonationCard(props) {
       <hr className="mb-5 mt-3"></hr>
       <section>
         <ul style={{ listStyleType: "none" }}>
-          <li className="mb-3">
+          <li key={0} className="mb-3">
             Prefix :{" "}
             <span className={`${color + " font-weight-bold"}`}>
               [{props.prefix}]
             </span>
+            <br />
+            <Popup
+              modal
+              closeOnDocumentClick
+              trigger={
+                <button className="btn btn-primary mt-3 mb-3">
+                  Perks List
+                </button>
+              }
+            >
+              {props.perks.map((e, index) => (
+                <li key={index + 1} className="m-2">
+                  {e}
+                </li>
+              ))}
+            </Popup>
           </li>
-          {props.perks.map((e) => (
-            <li>{e}</li>
-          ))}
         </ul>
       </section>
 
       <section className="ml-3 mb-3 mt-3">
-        <h5>
-          IDR. {props.price}
+        {props.inDiscount ? (
+          <h6>
+            IDR.{" "}
+            <del>
+              <NumberFormat
+                value={props.price}
+                displayType={"text"}
+                thousandSeparator={true}
+              />
+            </del>
+          </h6>
+        ) : null}
+        <h3>
+          <NumberFormat
+            value={props.price - props.price * props.discount}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"IDR. "}
+          />
           <span className="text-muted font-weight-lighter">/Permanent</span>
-        </h5>
+        </h3>
       </section>
       <DonationPopup />
     </div>
   );
 }
+// {props.perks.map((e) => (
+//   <li>{e}</li>
+// ))}

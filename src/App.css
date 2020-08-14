@@ -1,6 +1,6 @@
 .Front-bg {
-  background-image: url(https://luckynetwork.net/static/media/devider1.e985307a.png),
-    linear-gradient(237deg, #c1b132, #c96e00) !important;
+  background-image: url(/img/divider.png),
+    linear-gradient(237deg, #c1b132, #c200c9) !important;
 
   height: 136vh;
   width: 100%;
