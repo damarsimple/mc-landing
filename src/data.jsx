@@ -5,7 +5,7 @@ const data = {
   instagramLinks: "",
   registerLinks: "",
   forumLinks: "https://forum.galaxivale.net/",
-  donationsDiscountDays: 1597853048588, //EPOCH TIME
+  donationsDiscountDays: 1598380095000, //EPOCH TIME
   donations: [
     {
       name: "Mayor",

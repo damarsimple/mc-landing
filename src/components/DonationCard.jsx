@@ -65,15 +65,27 @@ export default function DonationCard(props) {
             </del>
           </h6>
         ) : null}
-        <h3>
-          <NumberFormat
-            value={props.price - props.price * props.discount}
-            displayType={"text"}
-            thousandSeparator={true}
-            prefix={"IDR. "}
-          />
-          <span className="text-muted font-weight-lighter">/Permanent</span>
-        </h3>
+        {props.inDiscount ? (
+          <h3>
+            <NumberFormat
+              value={props.price - props.price * props.discount}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"IDR. "}
+            />
+            <span className="text-muted font-weight-lighter">/Permanent</span>
+          </h3>
+        ) : (
+          <h3>
+            <NumberFormat
+              value={props.price}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"IDR. "}
+            />
+            <span className="text-muted font-weight-lighter">/Permanent</span>
+          </h3>
+        )}
       </section>
       <DonationPopup />
     </div>
