@@ -3,7 +3,6 @@ import Fade from "react-reveal/Fade";
 import RubberBand from "react-reveal/RubberBand";
 import Zoom from "react-reveal/Zoom";
 export default function Home(props) {
-  const data = props.props;
   return (
     <Fade delay={1000} top>
       <section
@@ -15,7 +14,7 @@ export default function Home(props) {
             <img
               className="img-fluid"
               width="300px"
-              src={data.logo}
+              src={props.logo}
               alt="logo"
             />
           </RubberBand>
@@ -24,20 +23,20 @@ export default function Home(props) {
           <br />
           <Fade delay={1300} top>
             <h1 className="text-uppercase text-light font-weight-bold ">
-              {data.title}
+              {props.title}
             </h1>
           </Fade>
           <Fade delay={1400} top>
             <h3 className="mt-3 text-light">
               {props.status
-                ? props.count + " " + data.langCurrentlyPlaying
-                : data.langServerOffline}
+                ? props.count + " " + props.langCurrentlyPlaying
+                : props.langServerOffline}
             </h3>
           </Fade>
           <br />
           <Zoom delay={1500}>
-            <a href={data.registerLinks}>
-              <button className="btn btn-dark mt-3 p-3">{data.langJoin}</button>
+            <a href={props.registerLinks}>
+              <button className="btn btn-dark mt-3 p-3">{props.langJoin}</button>
             </a>
           </Zoom>
         </div>

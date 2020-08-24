@@ -10,18 +10,25 @@ import Vote from "./components/Vote";
 import Gamemode from "./components/Gamemode";
 import Social from "./components/Social";
 import Footer from "./components/Footer";
-import data from "./data";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       serverStatus: null,
       playerCount: 0,
+
+      data: {},
     };
   }
 
   componentDidMount() {
+    fetch("/data.json").then((response) => {
+      response.json().then((data) => {
+        console.log(data.discordLinks);
+        this.setState({ data: data });
+      });
+    });
     fetch("https://api.mcsrvstat.us/2/mc.galaxivale.net")
       .then((response) => response.json())
       .then((data) => {
@@ -32,27 +39,71 @@ class App extends React.Component {
       });
   }
   render() {
+    const data = this.state.data;
     return (
       <>
-        <Navbar props={data} />
-
-        <Home
-          props={data}
-          status={this.state.serverStatus}
-          count={this.state.playerCount}
+        <Navbar
+          title={data.title}
+          langHome={data.langHome}
+          langAbout={data.langAbout}
+          langDonations={data.langDonations}
+          langVote={data.langVote}
+          langForum={data.langForum}
+          langGames={data.langGames}
+          forumLinks={data.forumLinks}
         />
 
-        <About props={data} />
+        <Home
+          status={this.state.serverStatus}
+          count={this.state.playerCount}
+          title={data.title}
+          logo={data.logo}
+          langCurrentlyPlaying={data.langCurrentlyPlaying}
+          langServerOffline={data.langServerOffline}
+          registerLinks={data.registerLinks}
+          langJoin={data.langJoin}
+        />
 
-        <Donations props={data} />
+        <About
+          langAboutUs={data.langAboutUs}
+          langAboutUsSubtitle={data.langAboutUsSubtitle}
+          langAboutDescription={data.langAboutDescription}
+          langJoin={data.langJoin}
+          logo={data.logo}
+        />
 
-        <Vote props={data} />
+        <Donations
+          langDonations={data.langDonations}
+          langDonationsDescription={data.langDonationsDescription}
+          langDonationsDiscountMessage={data.langDonationsDiscountMessage}
+          donations={data.donations ? data.donations : []}
+          donationsDiscountDays={data.donationsDiscountDays}
+          inDiscount={data.inDiscount}
+        />
 
-        <Gamemode props={data} />
+        <Vote
+          langVote={data.langVote}
+          langVoteDescription={data.langVoteDescription}
+          langButton1={data.langButton1}
+          langButton2={data.langButton2}
+          langButton3={data.langButton3}
+        />
 
-        <Social props={data} />
+        <Gamemode
+          langMostGames={data.langMostGames}
+          langMostGamesDescription={data.langMostGamesDescription}
+          games={data.games ? data.games : []}
+        />
 
-        <Footer props={data} />
+        <Social
+          langFollowInsta={data.langFollowInsta}
+          langSocialDescription={data.langSocialDescription}
+          instagramLinks={data.instagramLinks}
+          langJoinDiscord={data.langJoinDiscord}
+          discordLinks={data.discordLinks}
+        />
+
+        <Footer title={data.title} />
       </>
     );
   }

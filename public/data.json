@@ -1,0 +1,97 @@
+{
+  "title": "Galaxivale",
+  "logo": "/LOGO_GALAXIVALE.png",
+  "discordLinks": "https://discord.gg/zn79FM",
+  "instagramLinks": "",
+  "registerLinks": "",
+  "forumLinks": "https://forum.galaxivale.net/",
+  "donationsDiscountDays": 1598380095000,
+  "donations": [
+    {
+      "name": "Mayor",
+      "description": "",
+      "prefixColor": "blue",
+      "prefix": "Mayor",
+      "perks": [
+        "/kit mayor",
+        "/ec",
+        "/craft",
+        "/feed",
+        "/nick",
+        "Sethome 8 Times"
+      ],
+      "inDiscount": true,
+      "discount": 0.25,
+      "price": 100000
+    },
+    {
+      "name": "Governor",
+      "description": "",
+      "prefixColor": "yellow",
+      "prefix": "Governor",
+      "perks": [
+        "All Mayor Perks",
+        "/kit governor",
+        "/heal (with cooldown)",
+        "/nv",
+        "Sethome 12 Times"
+      ],
+      "inDiscount": true,
+      "discount": 0.25,
+      "price": 150000
+    },
+    {
+      "name": "President",
+      "description": "",
+      "prefixColor": "red",
+      "prefix": "President",
+      "perks": [
+        "All Governor Perks",
+        "/kit president",
+        "/heal (no cooldown)",
+        "/condense",
+        "/ptime",
+        "/pweather",
+        "/god",
+        "Sethome 16 Times"
+      ],
+      "inDiscount": true,
+      "discount": 0.25,
+      "price": 200000
+    }
+  ],
+  "games": [
+    {
+      "name": "Town Survival",
+      "subtitle": "Bertahan hidup dan membangun kotamu sendiri!",
+      "description": "Town Survival merupakan game bertahan hidup seperti survival biasanya. Tetapi yang berbeda dari survival ini adalah kita dapat membuat kota kita sendiri dan dapat mengajak teman kita untuk bermain dan bergabung menjadi bagian dari kota kita.",
+      "image": "https://p.kindpng.com/picc/s/154-1549812_transparent-minecraft-grass-block-hd-png-download.png"
+    }
+  ],
+  "langHome": "Home",
+  "langAbout": "Tentang",
+  "langDonations": "Donasi",
+  "langVote": "Vote",
+  "langForum": "Forum",
+  "langGames": "Games",
+  "langJoin": "Gabung Sekarang !",
+  "langCurrentlyPlaying": "Sedang bermain",
+  "langServerOffline": "Server Sedang Offline",
+  "langServerStatus": "Status Server",
+  "langAboutUs": "Tentang Kita",
+  "langAboutDescription": "Galaxivale, Server berasal dari Indonesia yang memiliki Tema antar-galaksi! Didalamnya banyak gamemode yang memiliki keunikannya masing-masing, seperti Skyblock dan Survival. tenang saja, gamemodenya akan nambah lagi kok! Banyak fitur-fitur menarik yang bisa kalian jelajah tanpa batas, Seperti Kosmetik, Crates, dan lain lain! Dengan gameplay yang unik dan komunitas yang welcoming, Galaxivale akan memberikan rasa nyaman dan senang saat bermain! Rank-Rank premium disini juga tidak terlalu mahal dan balance dengan gameplay! Bukan pay-to-win!",
+  "langAboutUsSubtitle": "Tentang Kita Sebagai Server",
+  "langDonationsDescription": "Dukung server kami dengan mendonasi dan dapatkan hal-hal menarik dari server!",
+  "langDonationsDiscountMessage": "Beli Rank dan Dapatkan discount dari harga biasanya!",
+  "langBuy": "Beli",
+  "langVoteDescription": "Dukung server kami dan dapatkan hadiahnya!",
+  "langButton1": "Minecraft-MP",
+  "langButton2": "Coming-SOON",
+  "langButton3": "Coming-SOON",
+  "langMostGames": "About Survival !",
+  "langMostGamesDescription": "",
+  "langSocial": "Media Sosial",
+  "langSocialDescription": "Ikuti Kita di sosial media",
+  "langFollowInsta": "Follow Kita !",
+  "langJoinDiscord": "Join Discord Kita"
+}

@@ -1,12 +1,12 @@
 import React from "react";
 
 export default function Navbar(props) {
-  const data = props.props;
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
         <a className="navbar-brand d-flex" href="#home">
-          <h3 className="font-weight-bold text-uppercase text-info"> {data.title}</h3>
+          <h3 className="font-weight-bold text-uppercase text-info"> {props.title}</h3>
         </a>
         <button
           className="navbar-toggler"
@@ -23,32 +23,32 @@ export default function Navbar(props) {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#home">
-                {data.langHome}
+                {props.langHome}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#about">
-                {data.langAbout}
+                {props.langAbout}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#donations">
-                {data.langDonations}
+                {props.langDonations}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#vote">
-                {data.langVote}
+                {props.langVote}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={data.forumLinks}>
-                {data.langForum}
+              <a className="nav-link" href={props.forumLinks}>
+                {props.langForum}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#games">
-                {data.langGames}
+                {props.langGames}
               </a>
             </li>
           </ul>

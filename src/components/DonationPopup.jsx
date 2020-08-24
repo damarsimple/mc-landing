@@ -2,8 +2,8 @@ import React from "react";
 import Popup from "reactjs-popup";
 import { FaShoppingCart, FaInfo } from "react-icons/fa";
 import Zoom from "react-reveal/Zoom";
-import data from "../data";
-export default () => (
+
+export default (props) => (
   <Popup
     trigger={
       <button className="btn btn-primary">
@@ -31,7 +31,7 @@ export default () => (
         </section>
         <hr className="mb-5 mt-3 "></hr>
         <h6 className="align-self-center">
-          <a href={data.discordLinks}>Klik untuk masuk Discord</a>
+          <a href={props.discordLinks}>Klik untuk masuk Discord</a>
         </h6>
       </div>
     </Zoom>

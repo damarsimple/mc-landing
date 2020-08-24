@@ -87,7 +87,7 @@ export default function DonationCard(props) {
           </h3>
         )}
       </section>
-      <DonationPopup />
+      <DonationPopup discordLinks=""/>
     </div>
   );
 }
